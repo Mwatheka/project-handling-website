@@ -6,7 +6,12 @@ body {
   background-color: rgb(22, 255, 255);
   color: black;
   position: relative;
-  background-image: url('/assets/img/portfolio-5.JPG');
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* background-image: url('/assets/img/portfolio-5.JPG'); */
   /* Remove the redundant background property */
   /* background: transparent; */
 }
@@ -24,7 +29,10 @@ body::before {
   height: 100vh;
   z-index: -1;
 }
-
+.wrapper
+{
+  flex: 1;
+}
 @media (min-width: 1024px) {
   body::before {
     background-attachment: fixed;
@@ -875,6 +883,78 @@ section .container {
   right: 15px;
 }
 /*--------------------------------------------------------------
+# Portfolio Details
+--------------------------------------------------------------*/
+.portfolio-details {
+  padding-top: 40px;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+.portfolio-details .container {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.portfolio-details .portfolio-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.portfolio-details .portfolio-info {
+  padding-top: 45px;
+}
+
+.portfolio-details .portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.portfolio-details .portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.portfolio-details .portfolio-info ul li+li {
+  margin-top: 10px;
+}
+
+.portfolio-details .portfolio-info p {
+  font-size: 15px;
+  padding: 15px 0 0 0;
+}
+
+@media (max-width: 992px) {
+  .portfolio-details .portfolio-info {
+    padding-top: 20px;
+  }
+}
+
+.portfolio-details .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.portfolio-details .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.portfolio-details .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #18d26e;
+}
+
+/*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
 .contact .info-box {
@@ -936,9 +1016,13 @@ section .container {
   bottom: 0;
   padding: 15px;
   text-align: right;
-  font-size: 13px;
+  font-size: 30px;
   color: #fff;
   z-index: 999999;
+}
+.credits h4
+{
+  font-size: 13px;
 }
 
 @media (max-width: 992px) {
@@ -950,10 +1034,31 @@ section .container {
 }
 
 .credits a {
-  color: #18d26e;
+  color: #0f0f0f;
   transition: 0.3s;
 }
 
 .credits a:hover {
-  color: #fff;
+
+  color: #10fa6a;
 }
+
+.credits .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(14, 13, 13, 0.2);
+  margin:0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.credits .social-links a:hover{
+  color: #080808;
+  background-color: #1df728;
+}
+
+
+
